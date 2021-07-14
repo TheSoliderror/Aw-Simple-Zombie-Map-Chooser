@@ -1,4 +1,4 @@
-game:executecommand("say AW Simple Zombie Map Chooser Loaded")
+game:executecommand("say AW Simple Zombie Map Chooser Created By Soliderror")
 
 
 local onPlayerSay = function (player, msg)

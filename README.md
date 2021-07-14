@@ -16,3 +16,5 @@ TO use this script is simple, in game open the text chat and then type ! followe
 This also adds a map restart command, the command is -->
 
 !r or !rs
+
+Please do not edit the top say command, all I ask is to give me credit for the script.

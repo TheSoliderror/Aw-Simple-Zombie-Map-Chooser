@@ -21,7 +21,7 @@ local onPlayerSay = function (player, msg)
     end
 	
 	if msg == "!descent" or msg == "!des" then
-		game:executecommand("map mp_zombie_h20")
+		game:executecommand("map mp_zombie_h2o")
     end
 
 	

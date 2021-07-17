@@ -1,36 +1,31 @@
 game:executecommand("say AW Simple Zombie Map Chooser Created By Soliderror")
 
-
-local onPlayerSay = function (player, msg)
-    msg = string.lower(msg);
-
-    if msg == "!rs" or msg == "!r" then
-		game:executecommand("fast_restart")
+level:onnotify("say", function(player, message)
+    local msg = string.lower(message)
+		
+    if msg == "!fr" or msg == "!rs" then
+    	game:executecommand("fast_restart")
+    	return
     end
-	
-	if msg == "!outbreak" or msg == "!out" then
-		game:executecommand("map mp_zombie_lab")
-    end
-	
-	if msg == "!infection" or msg == "!infect" then
-		game:executecommand("map mp_zombie_brg")
-    end
-	
-	if msg == "!carrier" or msg == "!car" then
-		game:executecommand("map mp_zombie_ark")
-    end
-	
-	if msg == "!descent" or msg == "!des" then
-		game:executecommand("map mp_zombie_h2o")
+		
+    local args = {}
+    for arg in string.gmatch(msg, "[^%s]+") do
+    	table.insert(args, arg)
     end
 
-	
-end
-
-local onPlayerConnected = function (player)
-	local saylistener = player:onnotify("say", function(msg) onPlayerSay(player, msg) end);
-        
-end
-
-
-level:onnotify("connected", onPlayerConnected);
+    if args[1] ~= "!map" then
+        return
+    end
+		
+    if args[2] == "outbreak" then
+        game:executecommand("map mp_zombie_lab")
+    elseif args[2] == "infection" then
+        game:executecommand("map mp_zombie_brg")
+    elseif args[2] == "carrier" then
+        game:executecommand("map mp_zombie_ark")
+    elseif args[2] == "descent" then
+        game:executecommand("map mp_zombie_h2o")
+    else
+        game:executecommand("say The requested map was not found.")
+    end
+end);

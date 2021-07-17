@@ -1,4 +1,4 @@
-game:executecommand("say AW Simple Zombie Map Chooser Created By Soliderror")
+game:executecommand("say AW Simple Zombie Map Chooser Originaly Created By Soliderror, New Edit By Mjkzy")
 
 level:onnotify("say", function(player, message)
     local msg = string.lower(message)

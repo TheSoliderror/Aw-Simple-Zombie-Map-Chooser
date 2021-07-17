@@ -4,7 +4,7 @@ Installation:
 Open the root folder of your Advanced Warfare game and open s1x and then add the given folder to the scripts folder.
 
 Using:
-TO use this script is simple, in game open the text chat and then type !map0 followed by any map name, examples-->
+To use this script is simple, in game open the text chat and then type !map0 followed by any map name, examples-->
 
 !map outbreak
 !map infection
